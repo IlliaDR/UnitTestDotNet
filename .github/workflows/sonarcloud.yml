@@ -45,4 +45,5 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"IlliaDR_UnitTestDotNet" /o:"illiadr" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build .\UnitTests\UnitTests.sln
+          dotnet test --collect "Code Coverage" .\UnitTests\UnitTests.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
