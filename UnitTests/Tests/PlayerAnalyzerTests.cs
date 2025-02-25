@@ -6,7 +6,7 @@ public class PlayerAnalyzerTests
 
 	public PlayerAnalyzerTests()
 	{
-		// Initialize the analyzer instance before each test
+		// Initialize the analyzer instance
 		analyzer = new PlayerAnalyzer();
 	}
 
